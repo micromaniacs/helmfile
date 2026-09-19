@@ -27,10 +27,10 @@ const alpineIndexBody = `<html>
 
 func TestFetcherFetch(t *testing.T) {
 	responses := map[string]string{
-		"https://dl.k8s.io/release/stable.txt":                                    "v1.36.4\n",
-		"https://api.github.com/repos/helmfile/helmfile/releases/latest":          `{"tag_name": "v1.7.4"}`,
-		"https://dl-cdn.alpinelinux.org/alpine/":                                  alpineIndexBody,
-		"https://hub.docker.com/v2/repositories/library/node/tags/?page_size=100": `{"results":[{"name":"26.8.1-alpine","images":[{"os":"linux","architecture":"amd64"},{"os":"linux","architecture":"arm64"}]}]}`,
+		"https://dl.k8s.io/release/stable.txt":                                                "v1.36.4\n",
+		"https://api.github.com/repos/helmfile/helmfile/releases/latest":                      `{"tag_name": "v1.7.4"}`,
+		"https://dl-cdn.alpinelinux.org/alpine/":                                              alpineIndexBody,
+		"https://hub.docker.com/v2/repositories/library/node/tags/?name=alpine&page_size=100": `{"results":[{"name":"26.8.1-alpine","images":[{"os":"linux","architecture":"amd64"},{"os":"linux","architecture":"arm64"}]}]}`,
 	}
 	ctrl := gomock.NewController(t)
 	client := NewMockHTTPClient(ctrl)

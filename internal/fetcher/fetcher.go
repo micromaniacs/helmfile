@@ -19,7 +19,7 @@ const (
 	kubectlURL  = "https://dl.k8s.io/release/stable.txt"
 	helmfileURL = "https://api.github.com/repos/helmfile/helmfile/releases/latest"
 	alpineURL   = "https://dl-cdn.alpinelinux.org/alpine/"
-	nodeURL     = "https://hub.docker.com/v2/repositories/library/node/tags/?page_size=100"
+	nodeURL     = "https://hub.docker.com/v2/repositories/library/node/tags/?name=alpine&page_size=100"
 
 	githubAccept = "application/vnd.github+json"
 	userAgent    = "github.com/alexeyco/helmfile (image generator)"

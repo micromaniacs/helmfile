@@ -34,7 +34,7 @@ func TestRender(t *testing.T) {
 		"ARG NODE_VERSION=26.8.1",
 		"node:${NODE_VERSION}-alpine",
 		"COPY --from=node",
-		"apk add --no-cache libstdc++",
+		"apk add --no-cache libatomic libstdc++",
 	} {
 		if !strings.Contains(got, want) {
 			t.Errorf("output missing %q", want)

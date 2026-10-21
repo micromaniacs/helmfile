@@ -20,7 +20,7 @@ RUN apk add --no-cache curl \
  && chmod +x /out/kubectl
 
 FROM ghcr.io/helmfile/helmfile:v${HELMFILE_VERSION}
-RUN apk add --no-cache libstdc++
+RUN apk add --no-cache libatomic libstdc++
 
 LABEL org.opencontainers.image.title="helmfile" \
       org.opencontainers.image.source="https://github.com/alexeyco/helmfile" \
